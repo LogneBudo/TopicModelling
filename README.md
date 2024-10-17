@@ -1,4 +1,4 @@
-# TopicModelling
+# Topic Modelling with NLPs
 
 ## Overview
 TopicModelling is a .NET Framework 4.8 application that uses machine learning to identify topics in a corpus of text documents. It leverages the Microsoft.ML library to perform Latent Dirichlet Allocation (LDA) for topic modeling.
