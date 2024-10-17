@@ -73,4 +73,4 @@ This project is licensed under the MIT License.
 - [Visual Studio](https://visualstudio.microsoft.com/) for the development environment.
 
 ## Screenshots
-![Visual Studio](https://user-images.githubusercontent.com/yourusername/visualstudio.png)
+![Visual Studio](https://user-images.githubusercontent.com/lognebudo/visualstudio.png)
