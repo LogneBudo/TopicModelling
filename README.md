@@ -71,6 +71,3 @@ This project is licensed under the MIT License.
 ## Acknowledgements
 - [Microsoft.ML](https://github.com/dotnet/machinelearning) for the machine learning library.
 - [Visual Studio](https://visualstudio.microsoft.com/) for the development environment.
-
-## Screenshots
-![Visual Studio](https://user-images.githubusercontent.com/yourusername/visualstudio.png)
