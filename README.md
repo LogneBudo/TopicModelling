@@ -50,6 +50,8 @@ var ldaModelFilePath = "path/to/save/lda.zip";
 
 ### Example Output
 
+![Result Topic Modelling](resulttopicmodelling.png)
+
 ## Project Structure
 
 ```

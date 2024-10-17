@@ -2,38 +2,42 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.ML;
 using Microsoft.ML.Data;
-using Microsoft.ML.Transforms.Text;
 
-namespace ModelTopcing
+namespace ModelTopicing
 {
     internal class Program
     {
+        // Class to hold the text data
         public class TextData
         {
             public string Text { get; set; }
         }
+
         static void Main(string[] args)
         {
+            // File paths for the corpus, stopwords, and the LDA model
             var corpusFilePath = "corpus.txt";
             var stopwordsFilePath = "stopwords.txt";
             var ldaModelFilePath = "lda.zip";
 
+            // Load stopwords from the file into a HashSet
             var stopwords = new HashSet<string>(File.ReadAllLines(stopwordsFilePath));
+            // Load the corpus from the file into an array of strings
             var corpus = File.ReadAllLines(corpusFilePath);
 
+            // Initialize MLContext
             var mlContext = new MLContext();
 
-            // Load the data
+            // Load the data into a list of TextData objects
             var data = new List<TextData>();
             foreach (var line in corpus)
             {
                 data.Add(new TextData { Text = line });
             }
 
+            // Convert the list of TextData objects into an IDataView
             var dataView = mlContext.Data.LoadFromEnumerable(data);
 
             // Define the text processing pipeline
@@ -44,16 +48,16 @@ namespace ModelTopcing
                 .Append(mlContext.Transforms.Text.ProduceNgrams("Ngrams", "Tokens", ngramLength: 1, useAllLengths: false))
                 .Append(mlContext.Transforms.Text.LatentDirichletAllocation("Features", "Ngrams", numberOfTopics: 5));
 
-            // Train the model
+            // Train the model using the pipeline
             var model = pipeline.Fit(dataView);
 
-            // Save the model
+            // Save the trained model to a file
             mlContext.Model.Save(model, dataView.Schema, ldaModelFilePath);
 
-            // Transform the data
+            // Transform the data using the trained model
             var transformedData = model.Transform(dataView);
 
-            // Extract the LDA topics
+            // Extract the LDA topics from the transformed data
             var ldaColumns = transformedData.GetColumn<float[]>("Features").ToArray();
 
             // Get the slot names (words) for the Ngrams column
@@ -61,6 +65,7 @@ namespace ModelTopcing
             transformedData.Schema["Ngrams"].GetSlotNames(ref slotNames);
             var words = slotNames.DenseValues().Select(x => x.ToString()).ToArray();
 
+            // Print the top words for each topic
             Console.WriteLine("Top words for each topic:");
             for (int topicIndex = 0; topicIndex < 5; topicIndex++)
             {
@@ -72,7 +77,6 @@ namespace ModelTopcing
 
                 Console.WriteLine($"Topic {topicIndex}: {string.Join(", ", topWords)}");
             }
-
         }
     }
 }

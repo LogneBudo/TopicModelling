@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35209.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelTopcing", "ModelTopcing.csproj", "{5076BF9E-2032-4AD8-B4B7-AFCF1E09E9A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelTopicing", "ModelTopicing.csproj", "{5076BF9E-2032-4AD8-B4B7-AFCF1E09E9A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
