@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35209.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelTopcing", "ModelTopcing.csproj", "{5076BF9E-2032-4AD8-B4B7-AFCF1E09E9A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5076BF9E-2032-4AD8-B4B7-AFCF1E09E9A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5076BF9E-2032-4AD8-B4B7-AFCF1E09E9A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5076BF9E-2032-4AD8-B4B7-AFCF1E09E9A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5076BF9E-2032-4AD8-B4B7-AFCF1E09E9A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E0FF3F3-F752-4272-94EF-3A0866D11184}
+	EndGlobalSection
+EndGlobal
