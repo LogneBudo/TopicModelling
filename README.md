@@ -19,9 +19,15 @@ TopicModelling is a .NET Framework 4.8 application that uses machine learning to
 ### Installation
 1. Clone the repository:
     
-git clone https://github.com/yourusername/TopicModelling.git
+git clone https://github.com/lognebudo/TopicModelling.git
 
 2. Open the solution in Visual Studio.
+
+3. Install the `Microsoft.ML` package via NuGet Package Manager Console:
+
+```bash
+Install-Package Microsoft.ML
+```
 
 ### Usage
 1. Prepare your corpus and stopwords files:
