@@ -48,11 +48,13 @@ var ldaModelFilePath = "path/to/save/lda.zip";
 
 ## Project Structure
 
+```
 TopicModelling/ 
 ├── Program.cs 
 ├── corpus.txt 
 ├── stopwords.txt 
 └── lda.zip
+```
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request.
